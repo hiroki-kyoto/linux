@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<p id='display'></p>
+	</body>
+
+<script>
+var dis = document.getElementById('display');
+var F = function(f){
+  return (function(g){
+    g(g);
+  })(function(h){
+    return function(){
+      f(h(h));
+    };
+  })
+}
+var x = 0;
+var test = F(function(k){
+  return k(x)*(x+1);
+});
+console.log("x = " + x);
+// what do you guess the result will be?
+// I got a wring answer, >_<
+
+</script>
+</html>
